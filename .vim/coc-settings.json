@@ -1,0 +1,4 @@
+{
+  "eslint.quiet": true,
+  "eslint.format.enable": true
+}

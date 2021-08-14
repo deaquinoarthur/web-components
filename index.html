@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Web Components Example</title>
+    <style>
+      *,
+      *::before,
+      *::after {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: Arial, Helvetica, sans-serif;
+      }
+
+      .container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 16px;
+        padding: 16px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <user-card
+        fullName="Jimmy Flight"
+        avatar="https://randomuser.me/api/portraits/men/1.jpg"
+      >
+        <span slot="email">jimmyflight@email.com</span>
+        <span slot="phone">+234234678</span>
+      </user-card>
+
+      <user-card
+        fullName="Sammy Withsmake"
+        avatar="https://randomuser.me/api/portraits/men/2.jpg"
+      >
+        <span slot="email">sammywithsmake@email.com</span>
+        <span slot="phone">+234234678</span>
+      </user-card>
+
+      <user-card
+        fullName="John Biruflay"
+        avatar="https://randomuser.me/api/portraits/men/3.jpg"
+      >
+        <span slot="email">johnhiruflay@gmail.com</span>
+        <span slot="phone">+234234678</span>
+      </user-card>
+    </div>
+
+    <script src="userCards.js"></script>
+  </body>
+</html>
